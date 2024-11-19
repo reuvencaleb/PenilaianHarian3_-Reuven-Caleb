@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Website tentang isu sosial, politik, dan ekonomi di Indonesia dan dunia">
+    <meta name="keywords" content="politik, ekonomi, sosial, Indonesia, dunia">
+
+    <title>Sosial, Politik & Ekonomi</title>
+    <style>
+        /* Reset */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        /* background - styling */
+        body {
+            font-family: 'Times New Roman', sans-serif;
+            background-color: #000000; /* background body jadi hitam */
+            background-size: fill;
+            background-repeat: no-repeat;
+            background-position: center; /* biar ditengah */
+            color: #fff; /* teks warna putih */
+            height: 100vh; 
+            display: flex;
+            flex-direction: column;
+        }
+        
+        h1, h2 { color: #FFD700; font-weight: bold; text-align: center; }
+
+        /* Navbar */
+        .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333333; /* Warna navbar diganti jadi abu-abu gelap */
+    color: #FFD700; /* Teks nya warna emas */
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 9999; /* Pastikan navbar berada di atas elemen lain */
+}
+    .navbar .logo img { height: 40px; }
+    .navbar ul { list-style: none; display: flex; justify-content: center; gap: 20px; }
+    .navbar a { color: #FFD700; text-decoration: none; font-size: 18px; } /* Link navbar warna emas */
+    .navbar a:hover { border-bottom: 2px solid #f4a261; }
+    .navbar a.active {
+    border-bottom: 2px solid #FFD700;
+}
+        /* isi */
+        section {
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8); /* warna background section jadi hitam transparan */
+            color: #fff;
+            margin: 20px auto;
+            max-width: 800px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        section {
+    padding: 40px;
+    margin: 40px auto;
+    h1 { font-size: 32px; }
+h2 { font-size: 28px; }
+
+}
+
+        p { line-height: 1.6; font-size: 18px; text-align: left; }
+
+        /* style bulat */
+        .rounded-img { 
+            width: 100%; 
+            max-width: 600px; 
+            border-radius: 50%; 
+        }
+
+        /* Carousel */
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            overflow: hidden;
+            margin: 20px auto;
+        }
+        .carousel { display: flex; transition: transform 0.5s ease; }
+        .slide { min-width: 100%; position: relative; }
+        .slide img { width: 100%; border-radius: 50%; } /* buat gambar carousel melingkar */ 
+        .overlay {
+            position: absolute;
+            bottom: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            width: 80%;
+            text-align: center;
+        }
+        .overlay h2, .watch-btn { color: white; }
+        .watch-btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 16px;
+            background-color: #FFD700;
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #FFD700;
+            font-size: 24px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        .prev { left: 10px; }
+        .next { right: 10px; }
+        .carousel-container, .slide img {
+    width: 100%;
+}
+
+        /* Footer */
+    footer {
+        position: fixed; /* biar footer tetep dibawah */
+        bottom: 0; /* biar footer tetep dibawah */
+        left: 0;
+        width: 100%; /* lebar footer sama kayak lebar layar */
+        background-color: #333333; /* Warna background abu-abu gelap */
+        color: #FFD700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000; 
+    }
+
+    /* biar ada jarak di atas footer */
+    body {
+        padding-bottom: 60px; 
+    }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo"><img src="kompas-logo.png" alt="Logo"></div> 
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#politik">Politik</a></li>
+                <li><a href="#ekonomi">Ekonomi</a></li>
+                <li><a href="#sosial">Sosial</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- isi -->
+    <section id="home">
+        <br>
+        <br>
+        <h1>Selamat Datang di Website Sosial, Politik & Ekonomi</h1>
+        <p>Website ini berisikan keadaan sosial, politik, dan ekonomi di Indonesia serta di Dunia. Untuk lebih jelas, silakan klik bagian di navigasi.</p>
+    </section>
+
+    <section id="politik" style="text-align: center;">
+        <h2>Politik</h2>
+        <a href="politik.html">
+            <img src="gibran.jpeg" alt="Gambar Politik" class="rounded-img" style="display: block; margin: 0 auto;">
+        </a>
+        <p>Saat ini, Indonesia baru saja mengalami Pemilu 2024 yang ditandai dengan adanya presiden baru yaitu Prabowo Subianto dan Gibran.</p>
+    </section>
+    
+    
+    <!-- Carousel - Ekonomi -->
+    <section id="ekonomi">
+        <h2>Ekonomi</h2>
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="slide">
+                    <img src="uang.jpeg" alt="Mata Uang Indonesia">
+                    <div class="overlay">
+                        <h2>Keadaan mata uang di Indonesia</h2>
+                        <a href="https://www.bi.go.id/id/publikasi/ruang-media/news-release/Pages/sp_2620424.aspx" target="_blank" class="watch-btn">Klik di sini</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="dollar.jpg" alt="Mata Uang Dunia">
+                    <div class="overlay">
+                        <h2>Keadaan mata uang di Dunia</h2>
+                        <a href="https://manajemen.feb.ummetro.ac.id/daftar-nilai-tukar-mata-uang-tertinggi-di-dunia-apakah-indonesia-termasuk" target="_blank" class="watch-btn">Klik di sini</a>
+                    </div>
+                </div>
+            </div>
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+    </section>
+
+    <section id="sosial" style="text-align: center;">
+        <h2>Sosial</h2>
+        <img src="sosial.png" alt="Gambar Sosial" class="rounded-img" style="display: block; margin: 0 auto;">
+        <p>Kondisi sosial di Indonesia saat ini penuh dengan keberagaman budaya dan semangat gotong royong. Namun masih terdapat rakyat yang tidak menghargai keberagaman budaya yang berbeda dengan suku mereka sendiri , mereka merasa budaya nya yang paling baik dan paling benar.</p>
+    </section>
+    
+    <!-- berita nasional-->
+    <section id="berita">
+        <h2>Berita Hari ini</h2>
+        <br>
+        <div class="news-grid">
+            <div class="news-item">
+                <!-- link buat buka halaman baru -->
+                <a href="halamanbaru.html" target="_blank">
+                    <img src="barel .jpeg" alt="Produksi Minyak">
+                    <h3>Mengejar Produksi 1 Juta Barel di 2030</h3>
+                    <p>Target ambisius produksi minyak dalam negeri.</p>
+                </a>
+                <br>
+            </div>
+            <!-- Berita tambahan -->
+            <div class="news-item">
+                <br>
+                <h3>Berita Terkini</h3>
+                <br>
+                <hr> <!--buat ada garis di artikel nya -->
+                <p style="text-align: justify;">Perkembangan ekonomi global saat ini ditandai oleh ketidakpastian yang dipicu oleh inflasi tinggi, suku bunga yang meningkat di negara maju, dan ketegangan geopolitik. Hal ini memperlambat pertumbuhan ekonomi global dan berpotensi menekan ekspor Indonesia, terutama komoditas. Kenaikan suku bunga global juga memicu arus modal keluar dari negara berkembang, termasuk Indonesia, yang bisa melemahkan nilai tukar rupiah. Namun, ekonomi Indonesia masih cukup tangguh berkat konsumsi domestik yang kuat dan kebijakan moneter serta fiskal yang adaptif. Pemerintah berupaya memperkuat ekonomi dengan diversifikasi ekspor, digitalisasi, dan peningkatan investasi hijau untuk menjaga stabilitas di tengah tantangan global.</p>
+            </div>
+        </div>
+    </section>    
+
+<!-- Nasional -->
+<section id="nasional">
+    <h2>Nasional</h2>
+    <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; text-align: center;">
+        <!-- Foto pertama -->
+        <div style="flex: 1; max-width: 400px;">
+            <a href="usulan-standar-dunia.html" target="_blank">
+                <img src="nasional1.jpeg" alt="Usulan Indonesia Resmi Jadi Standar Dunia" style="width: 100%; border-radius: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);">
+            </a>
+            <h3 style="margin: 10px 0;">Usulan Indonesia Resmi Jadi Standar Dunia</h3>
+            <p>Selasa, 19 November 2024 | 10:25 WIB</p>
+        </div>
+        <!-- Foto kedua -->
+        <div style="flex: 1; max-width: 400px;">
+            <a href="pertumbuhan-ekonomi-stabil.html" target="_blank">
+                <img src="nasional2.jpeg" alt="Pendorong Utama Pertumbuhan Ekonomi yang Stabil" style="width: 100%; border-radius: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);">
+            </a>
+            <h3 style="margin: 10px 0;">Pendorong Utama Pertumbuhan Ekonomi yang Stabil</h3>
+            <p>Senin, 18 November 2024 | 09:05 WIB</p>
+            <br>
+            <br> <!--buat ada spasi dengan footer-->
+            <br>
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- JavaScript buat Carousel -->
+    <script>
+        const carousel = document.querySelector('.carousel'); // Elemen carousel utama
+        const slides = document.querySelectorAll('.slide'); // Semua slide dalam carousel
+        const prevButton = document.querySelector('.prev'); // Tombol untuk slide sebelumnya
+        const nextButton = document.querySelector('.next'); // Tombol untuk slide berikutnya
+        let currentIndex = 0;
+        let interval = setInterval(nextSlide, 3000); // Interval otomatis: setiap 3 detik geser slide
+    
+        // Fungsi untuk menampilkan slide berdasarkan indeks
+        function showSlide(index) {
+            carousel.style.transform = `translateX(-${index * 100}%)`;
+        }
+    
+        // Fungsi untuk berpindah ke slide berikutnya
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length; // Jika mencapai akhir, kembali ke slide pertama
+            showSlide(currentIndex);
+        }
+    
+        // Fungsi untuk berpindah ke slide sebelumnya
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length; // Jika mencapai awal, kembali ke slide terakhir
+            showSlide(currentIndex);
+        }
+    
+        // Event handler untuk tombol prev dan next
+        prevButton.addEventListener('click', () => {
+            prevSlide();
+            resetAutoplay();
+        });
+    
+        nextButton.addEventListener('click', () => {
+            nextSlide();
+            resetAutoplay();
+        });
+    
+        // Fungsi untuk mereset interval autoplay
+        function resetAutoplay() {
+            clearInterval(interval); // Hentikan interval yang sedang berjalan
+            interval = setInterval(nextSlide, 3000); // Mulai interval baru
+        }
+    
+        // Menambahkan smooth scroll untuk navigasi navbar
+document.querySelectorAll('.navbar a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault(); // Mencegah aksi default tautan
+        const target = document.querySelector(this.getAttribute('href')); // Ambil target elemen
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' }); // Scroll dengan efek halus
+    });
+});
+    </script>
+    
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Reuven Caleb Tan. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
